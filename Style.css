@@ -1,0 +1,556 @@
+body {
+    margin: 0;
+    
+}
+
+.header-text{
+    background: #EC623C;
+    font-family: 'Poppins'; 
+    height: 20px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    justify-content: center;
+
+}
+
+.header-text{
+    padding-top: 30px;
+    text-align: center;
+}
+
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Roboto", sans-serif;
+    --font-secondary: "Work Sans", sans-serif;
+  }
+  
+  /* Colors */
+  :root {
+    --color-default: #364d59;
+    --color-primary: #e39f56;
+    --color-secondary: #52565e;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    overflow-x: hidden;
+    padding: 0;
+  }
+  
+  .hero .carousel {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .hero .carousel-item {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1;
+    transition-duration: 0.4s;
+  }
+  
+  .hero .carousel-item::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    inset: 0;
+  }
+  
+  .hero .info {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .hero .info {
+      padding: 0 50px;
+    }
+  }
+  
+  .hero .info h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 56px;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .hero .info h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #feb900;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero .info h2 {
+      font-size: 36px;
+    }
+  }
+  
+  .hero .info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+  }
+  
+  .hero .info .btn-get-started {
+    font-family:"Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #fff;
+    border: 2px solid #feb900;
+  }
+  
+  .hero .info .btn-get-started:hover {
+    background: #EC623C;
+  }
+  
+  .hero .carousel-control-prev {
+    justify-content: start;
+  }
+  
+  @media (min-width: 640px) {
+    .hero .carousel-control-prev {
+      padding-left: 15px;
+    }
+  }
+  
+  .hero .carousel-control-next {
+    justify-content: end;
+  }
+  
+  @media (min-width: 640px) {
+    .hero .carousel-control-next {
+      padding-right: 15px;
+    }
+  }
+  
+  .hero .carousel-control-next-icon,
+  .hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 26px;
+    line-height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: yellow;
+    border-radius: 50px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    z-index: 3;
+    transition: 0.3s;
+  }
+  
+  .hero .carousel-control-prev:focus,
+  .hero .carousel-control-next:focus {
+    opacity: 0.5;
+  }
+  
+  .hero .carousel-control-prev:hover,
+  .hero .carousel-control-next:hover {
+    opacity: 0.9;
+  }
+
+  .site-weblogo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.site-weblogo img {
+   height: 175px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-weblogo {
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.site-weblogo img {
+  animation: logoAnimation 1s ease-out;
+}
+
+.info h2,
+.info p,
+.info .btn-get-started {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInRight 1s forwards;
+}
+
+.info h2 {
+  animation-delay: 2s;
+}
+
+.info p {
+  animation-delay: 2.2s;
+}
+
+.info .btn-get-started {
+  animation-delay: 1s;
+}
+
+@keyframes logoAnimation {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+    
+
+.hero-ab {
+  width: 100%;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  background-size: cover; /* Add this line to make the background cover the section */
+  background-repeat: no-repeat; /* Remove "no repeat" */
+}
+
+
+/* Rest of your .hero styles remain unchanged */
+
+
+.hero-ab h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color:  #474a50;
+  font-family:  #e39f56;
+}
+
+.hero-ab h2 span {
+  color:  #e39f56;
+}
+
+.hero-ab p {
+  color: #4f4f5a;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+
+.hero-ab .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: #52565e;
+  font-weight: 600;
+}
+
+.hero-ab .btn-watch-video i {
+  color:  #feb900;
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero-ab .btn-watch-video:hover {
+  color:red;
+
+}
+
+.hero-ab .btn-watch-video:hover i {
+  color: rgba(206, 18, 18, 0.8);
+}
+.hero-ab .img-fluid{
+  height: 30em;
+  width: 90em;
+}
+
+@media (max-width: 640px) {
+  .hero-ab h2 {
+    font-size: 36px;
+  }
+
+  .hero-ab .btn-get-started,
+  .hero-ab .btn-watch-video {
+    font-size: 14px;
+  }
+}
+
+
+.btn-book-a-table {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff7f7;
+  background: rgb(94, 94, 215);
+  box-shadow: 0 8px 28px rgba(189, 29, 21, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-book-a-table:hover {
+  background: rgba(25, 0, 27, 0.768);
+  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
+}
+
+.btn-book-a-table::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 8, 119);
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.btn-book-a-table:hover::before {
+  transform: scaleX(1);
+  transform-origin: 100% 50%;
+}
+
+
+
+section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f5f6f7;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  color: #2e3135;
+}
+
+.section-header h2:before,
+.section-header h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background:  #feb900;
+  display: inline-block;
+}
+
+.section-header h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.section-header h2:after {
+  margin: 0 0 10px 15px;
+}
+
+.section-header p {
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: 1199px) {
+  .section-header p {
+    max-width: 60%;
+  } 
+}
+
+
+
+
+
+
+
+/* Add hover effect to each card */
+.card:hover {
+  background-color: #c9c9c9; /* Change to your desired hover background color */
+  transition: background-color 0.3s ease;
+}
+
+/* Define the normal state styles for the card */
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add box shadow for a subtle effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Increase card size */
+.card {
+  height: 350px; /* Adjust the height as per your design */
+  margin: 15px;
+}
+
+/* Optional: Add some padding for better spacing */
+.card-body {
+  padding: 20px;
+}
+
+
+video {
+  max-width: 100%;
+}
+.card {
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 1.5em;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-test {
+  border-radius: 15px; /* Add border-radius to curve the edges */
+  background-color: aliceblue;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease-in-out;
+  padding: 20px; /* Add padding to the cards */
+}
+
+.card-test:hover {
+  transform: scale(1.05); /* Add a slight scale effect on hover for a card lift */
+}
+
+.row-cols-md-3 .col {
+  margin-bottom: 20px; /* Add margin between testimonial cards */
+}
+
+.card-video {
+  position: relative;
+  border-radius: 15px; /* Add border-radius to curve the edges */
+  margin-left: 20px;
+  margin-right: 150px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 0; /* Remove the bottom margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 100%;
+}
+
+.card-video video {
+  width: 100%; /* Set the width of the video to 100% to fill the card */
+  border: none; /* Remove any border around the video */
+  border-radius: 15px; /* Match the border-radius of the card to fully curve the edges */
+  transition: filter 0.5s ease; /* Add a smooth transition for the filter property */
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Add a smooth transition for the opacity property */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  backdrop-filter: blur(8px); /* Add blur effect to the background */
+}
+
+.card-video:hover video {
+  filter: blur(4px); /* Apply blur effect on hover */
+}
+
+.card-video:hover .card-overlay {
+  opacity:0.6; /* Make the overlay visible on hover */
+}
+/* Your existing styles */
+
+/* Add a media query for screens smaller than 414px */
+@media (max-width: 414px) {
+  .card-video {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; /* Set the width to 100% for full width on smaller screens */
+  }
+
+  .row-cols-1 {
+    display: block; /* Ensure that each column takes full width on smaller screens */
+  }
+
+  .row-cols-1 .col {
+    margin-bottom: 10px; /* Adjust the margin for smaller screens */
+  }
+}
+
+
